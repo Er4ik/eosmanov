@@ -1,0 +1,13 @@
+@import 'src/assets/styles/_variables.scss';
+:host {
+    width: 100%;
+}
+
+footer {
+    width: 100%;
+
+    p {
+        color: $gray;
+        text-align: end;
+    }
+}

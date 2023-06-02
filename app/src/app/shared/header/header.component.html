@@ -1,0 +1,8 @@
+<header>
+    <h3>ERVIN OSMANOV</h3>
+    <nav>
+        <span [ngClass]="{'active': activeTab === ''}" (click)="handleTab('')">Select Work</span>
+        <span [ngClass]="{'active': activeTab === 'resume'}" (click)="handleTab('resume')">Resume</span>
+        <span [ngClass]="{'active': activeTab === 'about'}" (click)="handleTab('about')">About + Connect</span>
+    </nav>
+</header>

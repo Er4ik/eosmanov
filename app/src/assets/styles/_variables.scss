@@ -1,0 +1,11 @@
+$white: #fafafa;
+$black: #323132;
+$gray: rgba(0, 0, 0, .4);;
+$coral: #39d9d9;
+$red-pink: #f26c7f;
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

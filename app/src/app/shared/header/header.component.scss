@@ -1,0 +1,32 @@
+@import 'src/assets/styles/_variables.scss';
+
+header {
+    @include flex-center;
+    height: 30px;
+    width: 100%;
+    justify-content: space-between;
+
+    h3 {
+        letter-spacing: 2px;
+    }
+
+    nav {
+        display: flex;
+        gap: 20px;
+
+        span {
+            cursor: pointer;
+            color: $gray;
+            font-size: 14px;
+            transition: 0.1s ease-in-out;
+
+            &.active {
+                color: $black;
+            }
+
+            &:hover {
+                color: $black;
+            }
+        }
+    }
+}

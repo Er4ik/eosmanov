@@ -1,0 +1,74 @@
+<div class="about-wrapper">
+    <h1>About Ervin</h1>
+    <div class="head-info">
+        <h2>Software Engineer</h2>
+        <h3>Web-Developer, Detail-Oriented,<br> Problem Solver</h3>
+    </div>
+    <div class="bio">
+        <div class="bio-info">
+            <h3>Bio</h3>
+            <p>
+                Hello, I'm Ervin. Currently, I am a fourth-year student at<br>
+                Kyiv Polytechnic Institute. With over a year of experience in web<br>
+                development, support etc. I have developed a strong foundation<br>
+                in building robust and user-friendly web applications.<br><br><br>
+                
+                Throughout my journey, I have gained proficiency <br>
+                in front-end and backend technologies. I'm always eager<br> 
+                to learn and stay up-to-date with emerging<br>
+                technologies and industry trends, ensuring that I deliver<br>
+                innovative and cutting-edge solutions.<br>
+                In addition to my technical skills, I have a keen interest<br>
+                in business and product management. I understand the importance of<br>
+                developing solutions that align with both user needs and organizational goals.<br><br><br>
+                
+                Outside of academics, I actively participate in the development community.<br>
+                I have taken part in hackathons, collaborating with diverse teams<br>
+                to deliver innovative solutions within strict deadlines.<br>
+                Also A big part of my free time takes volunteering with organization<br>
+                "Brave to rebuild"<br><br><br>
+                
+                Beyond my professional pursuits, I enjoy staying active and exploring new hobbies. Whether it's engaging in outdoor<br>
+                activities, reading books on entrepreneurship, or attending tech conferences, I am always seeking new experiences and<br>
+                opportunities to grow both personally and professionally.
+
+            </p>
+        </div>
+        <div class="bio-photos">
+            <img class="img-1" src="assets/pictures/ervin-ua.jpg" alt="photo">
+            <img class="img-1" src="assets/pictures/ervin-kpi.jpg" alt="photo">
+        </div>
+    </div>
+    <div class="rhyme">
+        <h3>
+            “A head full of fears has no space for dreams.”
+        </h3>
+        <p>— Poem by Deborah Evans</p>
+    </div>
+    <div class="contact">
+        <h3>Let's Connect</h3>
+        <div class="messangers">
+            <a target=”_blank” href="https://www.instagram.com/er_4ik/"><img class="img-1" src="assets/icons/insta.png" alt="insta"></a>
+            <a target=”_blank” href="https://www.linkedin.com/in/ervin-osmanov-931033231/"><img class="img-1" src="assets/icons/linkedin.png" alt="insta"></a>
+            <a target=”_blank” href="https://t.me/Er4ik" ><img class="img-1" src="assets/icons/telegram.png" alt="insta"></a>
+        </div>
+        <p>
+            Please don't hesitate to reach out if you would like to chat about work or side<br>
+            project opportunities, share your feedback and input, or just connect. I am<br>
+            always open to new conversations and will do my best to respond to you in a<br>
+            timely manner. Cheers!
+        </p>
+        <app-button mode="default" text="CONTACT ME" (handleBtnClick)="OnContactClick()"></app-button>
+    </div>
+    <div class="insta-photos">
+        <h3>Ervin - <span>According to Instagram</span></h3>
+        <div class="carousel">
+            <div class="carousel-item" *ngFor="let image of images" (click)="showImage(image)">
+                <img [src]="image" alt="Image">
+            </div>
+        </div>
+    </div>
+    <div *ngIf="selectedImage" class="fullscreen-overlay" (click)="hideImage()">
+        <img [src]="selectedImage" alt="Selected Image" class="fullscreen-image">
+    </div>
+</div>
