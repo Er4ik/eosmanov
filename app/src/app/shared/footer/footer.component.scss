@@ -11,3 +11,11 @@ footer {
         text-align: end;
     }
 }
+
+@media screen and (max-width: 550px) {
+    footer {
+        p {
+            text-align: center;
+        }
+    }
+}

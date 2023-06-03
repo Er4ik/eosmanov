@@ -159,3 +159,92 @@
         }
     }
 }
+
+@media screen and (max-width: 990px) {
+    .about-wrapper {
+
+        h1 {
+            font-size: 5vw;
+        }
+
+        .bio {
+            max-width: 80vw;
+            margin: 50px auto;
+            flex-direction: column-reverse;
+
+            &-info {
+                width: 100%;
+            }
+
+            &-photos {
+                width: 100%;
+            }
+        }
+
+        .rhyme {
+            h3 {
+                font-size: 3vw;
+            }
+        }
+
+        .insta-photos {
+            margin: 0;
+            height: 950px;
+
+            .carousel {
+                display: grid;
+                gap: 10px;
+                gap: 1rem;
+                grid-template-columns: repeat(2, 1fr);
+
+                &-item {
+                    width: 250px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .about-wrapper {
+        margin: 100px auto;
+
+        h1 {
+            font-size: 7vw;
+        }
+
+        .head-info {
+            h2 {
+                font-size: 4vw;
+            }
+
+            h3 {
+                font-size: 3.6vw;
+            }
+        }
+
+        .contact {
+            .messangers {
+                display: flex;
+                gap: 20px;
+
+                img {
+                    width: 45px;
+                    cursor: pointer;
+                }
+            }
+
+            &-btn {
+                transform: scale(0.8);
+            }
+        }
+
+        .insta-photos {
+            .carousel {
+                &-item {
+                    width: 150px;
+                }
+            }
+        }
+    }
+}

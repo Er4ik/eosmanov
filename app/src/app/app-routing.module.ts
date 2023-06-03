@@ -5,9 +5,9 @@ import { AboutComponent } from './about/about.component';
 import { ResumeComponent } from './resume/resume.component';
 
 const routes: Routes = [
-  { path: '', component: WorkComponent, data: { animationState: 'One' } },
-  { path: 'resume', component: ResumeComponent, data: { animationState: 'Two' } },
-  { path: 'about', component: AboutComponent, data: { animationState: 'Three' } }
+  { path: '', component: WorkComponent, data: { animationState: 'work' } },
+  { path: 'resume', component: ResumeComponent, data: { animationState: 'resume' } },
+  { path: 'about', component: AboutComponent, data: { animationState: 'about' } }
 ];
 
 @NgModule({

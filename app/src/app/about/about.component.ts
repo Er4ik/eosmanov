@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })
-export class AboutComponent {
+export class AboutComponent implements OnInit {
   images = [
     'assets/pictures/1.jpg',
     'assets/pictures/2.jpg',
@@ -22,8 +22,17 @@ export class AboutComponent {
 
   constructor() {}
 
+  ngOnInit(): void {
+    this.scrollToTop();
+  }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
   OnContactClick() {
-    window.open("mailto:ervin.osmanov.007@gmail.com", '_blank')
+    const mailtoLink = "mailto:ervin.osmanov.007@gmail.com";
+    window.open(mailtoLink, '_blank')
   }
 
   showImage(image: string) {

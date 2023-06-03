@@ -66,6 +66,11 @@
 
                 &-2 {
                     background-color: $red-pink;
+
+                    img {
+                        width: 50%;
+                        transform: scale(1.8);
+                    }
                 }
             }
         }
@@ -88,5 +93,60 @@
         display: flex;
         justify-content: center;
         margin-top: 6rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .work-wrapper {
+
+        .main-projects {
+            margin: 50px auto;
+            gap: 1rem;
+            width: 70%;
+            grid-template-columns: repeat(1, 1fr);
+            grid-auto-rows: 20vh;
+
+            .project {
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .main-info {
+            h3 {
+                font-size: 2vw;
+            }
+            p {
+                font-size: 2vw;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .work-wrapper {
+        margin: 100px auto;
+        .main-projects {
+            .project {
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .main-info {
+            h3 {
+                font-size: 2.5vw;
+            }
+
+            p {
+                font-size: 2.5vw;
+            }
+        }
+
+        .about-btn {
+            transform: scale(0.8);
+        }
     }
 }

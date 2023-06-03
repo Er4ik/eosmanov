@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, ActivatedRoute } from '@angular/router';
 import { routeTransitionAnimations } from './route-transition-animations';
 
 @Component({
@@ -9,7 +9,18 @@ import { routeTransitionAnimations } from './route-transition-animations';
   animations: [routeTransitionAnimations]
 })
 export class AppComponent {
+  activeTab: string = '';
+
+  constructor(private readonly activatedRoute: ActivatedRoute) {}
+
+  setTab(tab: string) {
+    const baseRoute = 'work';
+    this.activeTab = tab !== baseRoute ? tab : '';
+  }
+
   prepareRoute(outlet: RouterOutlet) {
+    this.setTab(outlet.activatedRouteData['animationState']);
+
     return outlet &&
       outlet.activatedRouteData &&
       outlet.activatedRouteData['animationState'];

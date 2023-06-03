@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -7,12 +7,25 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  @Input()
   activeTab: string = '';
+  isBurgerActive = false;
 
   constructor(private readonly router: Router) {}
+
+  toggleMenu() {
+    this.isBurgerActive = !this.isBurgerActive;
+  }
 
   handleTab(tab: string) {
     this.activeTab = tab;
     this.router.navigateByUrl(`/${tab}`);
+  }
+
+  handleEvent(event: Event) {
+    const target = event.target as HTMLElement;
+    if (target.classList.contains('menu-item')) {
+      this.isBurgerActive = false;
+    }
   }
 }

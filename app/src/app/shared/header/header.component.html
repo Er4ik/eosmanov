@@ -5,4 +5,19 @@
         <span [ngClass]="{'active': activeTab === 'resume'}" (click)="handleTab('resume')">Resume</span>
         <span [ngClass]="{'active': activeTab === 'about'}" (click)="handleTab('about')">About + Connect</span>
     </nav>
+    <button 
+    class="hamburger hamburger--collapse" 
+    [class]="isBurgerActive ? 'is-active' : ''" 
+    type="button"
+    (click)="toggleMenu()"
+    >
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+    <div *ngIf="isBurgerActive" class="menu" (click)="handleEvent($event)">
+        <p class="menu-item" [routerLink]="['/']">Select Work</p>
+        <p class="menu-item" [routerLink]="['/resume']">Resume</p>
+        <p class="menu-item" [routerLink]="['/about']">About + Connect</p>
+    </div>
 </header>
