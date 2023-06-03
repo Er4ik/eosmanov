@@ -2,7 +2,7 @@
     <h1>— Ervin is a Fullstack Web Developer and Business Enthusiast</h1>
     <main>
         <div class="main-projects">
-            <div class="project project-1">
+            <div class="project project-1" (click)="onNavigate('elunic')">
                 <img src="assets/icons/elunic-logo.png" alt="logo">
                 <p>Elunic is your strategy consultant and<br> software integrator for IIoT & Industry 4.0.</p>
             </div>
@@ -22,7 +22,7 @@
             <p>— Mariya, HRD at Radency</p>
         </div>
         <div class="about-btn">
-            <app-button mode="default" text="ABOUT + CONNECT" (handleBtnClick)="onAboutPageClick()"></app-button>
+            <app-button mode="default" text="ABOUT + CONNECT" (handleBtnClick)="onNavigate('about')"></app-button>
         </div>
     </main>
 </div>

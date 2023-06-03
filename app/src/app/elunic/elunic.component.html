@@ -1,0 +1,67 @@
+<div class="elunic-wrapper">
+    <h1>shopfloor.io</h1>
+    <div class="title">
+        <p>— Digital Factory Software Suite —</p>
+        <p>
+            shopfloor.io connects and visualizes your machinery,
+            products and employees; either as the foundation
+            of a scalable and secure Industry 4.0 system
+            architecture or by connecting to your existing
+            infrastructure.
+        </p>
+    </div>
+    <img class="main-photo" src="assets/pictures/sfio-4.jpg" alt="photo">
+    <div class="info-role">
+        <h3>MY ROLE</h3>
+        <p>
+            This is the first big commercial project that started my journey as a full-time web developer. I was involved in product
+            development, implementation of new features, code support and improvement. I also did code reviews and helped my
+            colleagues on a regular basis. After six months of hard work, I was also responsible for onboarding new hires and
+            supporting them through the early stages of the product. Moreover, I often prioritized tasks and distributed them among
+            my colleagues.<br><br>
+            The product has a microservice architecture, which was a big challenge for me to improve my programming skills. Also,
+            using modern development tools gave me more energy and excitement for my daily hard work.
+        </p>
+    </div>
+    <div class="project-info">
+        <div class="images">
+            <img class="images-first" src="assets/pictures/sfio-main.jpg" alt="photo">
+            <img src="assets/pictures/sfio-2.jpg" alt="photo">
+            <img class="images-last" src="assets/pictures/sfio-3.jpg" alt="photo">
+        </div>
+        <div class="text">
+            <h3>PRODUCT</h3>
+            <p>shopfloor.io is an Industrial IoT application for cloud or on-premises operation with which you can connect your
+                systems, products and employees and visualize all relevant data in well-structured cockpits. Tapping into the IoT
+                potential of your machinery creates added value for the manufacturer, the operator and the end-users of the equipment.<br><br><br>
+            </p>
+            <h3>MICROSERVICES</h3>
+            <p *ngFor="let item of microservicesInfo">
+                <span>{{ item.title }}</span><br>
+                {{ item.data }}
+            </p>
+        </div>
+    </div>
+    <div class="comments">
+        <p>
+
+        </p>
+        <p></p>
+    </div>
+    <div class="comments">
+        <h3>
+            “It's awesome that you want to improve the documentation. That's always something that important and difficult for
+            someone that's "inside" to do, so your input would be very valuable.😄”
+        </h3>
+        <p>— W.Hefter, Team Lead at shopfloor.io</p>
+    </div>
+    <div class="contact-data">
+        <p>You can read more about the project by following link.</p>
+        <a href="https://www.elunic.com/en/shopfloor-io/" target="_blank">shopfloor.io</a>
+    </div>
+    <div class="tabs">
+        <a routerLink="/elunic">Elunic</a>
+        <a>•</a>
+        <a>Radency</a>
+    </div>
+</div>

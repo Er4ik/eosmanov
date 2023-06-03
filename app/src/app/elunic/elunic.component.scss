@@ -1,0 +1,193 @@
+@import 'src/assets/styles/_variables.scss';
+
+.elunic-wrapper {
+    @include flex-center;
+    flex-direction: column;
+    margin: 100px auto;
+
+    h1 {
+        font-size: 3vw;
+    }
+
+    .title {
+        margin: 20px auto;
+        width: 50%;
+        text-align: center;
+
+        p {
+            font-style: italic;
+        }
+    }
+
+    .main-photo {
+        width: 80%;
+        margin: 50px auto;
+        border-radius: 20px;
+    }
+
+    .info-role {
+        width: 50%;
+        margin: 20px auto;
+        color: $gray;
+        text-align: justify;
+
+        h3 {
+            color: $black;
+        }
+    }
+    
+    .project-info {
+        margin: 50px auto;
+        width: 70%;
+        display: flex;
+        gap: 100px;
+
+        .images {
+            width:50%;
+            
+            img {
+                width: 100%;
+            }
+
+            &-first {
+                border-radius: 20px 20px 0 0;
+            }
+
+            &-last {
+                border-radius: 0 0 20px 20px;
+            }
+        }
+
+        .text {
+            width: 50%;
+            text-align: justify;
+            p {
+                color: $gray;
+            }
+
+            span {
+                color: $black;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .contact-data {
+        @include flex-center;
+        flex-direction: column;
+        margin: 50px auto;
+
+        p {
+            text-align: center;
+            color: $gray;
+        }
+
+        a {
+            font-size: 3vw;
+            color: $black;
+            text-decoration: underline;
+        }
+    }
+
+    .comments {
+        width: 50%;
+        margin: 0px auto;
+
+        p {
+            color: $gray;
+            font-style: italic;
+        }
+    }
+
+    .tabs {
+        display: flex;
+        gap: 20px;
+        text-decoration: dotted;
+
+        a {
+            cursor: pointer;
+            color: $gray;
+
+            &:hover {
+                color: $black;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1700px) {
+    .elunic-wrapper {
+        .info-role {
+            width: 70%;
+        }
+        .project-info {
+            flex-direction: column;
+            align-items: center;
+
+            .images {
+                width: 80%;
+            }
+
+            .text {
+                width: 100%;
+            }
+        }
+
+        .comments {
+            width: 70%;
+        }
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .elunic-wrapper {
+        .title {
+            width: 70%;
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .elunic-wrapper {
+        margin: 50px auto;
+        h1 {
+            font-size: 5vw;
+        }
+        .info-role {
+            width: 90%;
+        }
+
+        .title {
+            width: 90%;
+        }
+
+        .project-info {
+            width: 90%;
+            flex-direction: column;
+            align-items: center;
+
+            .images {
+                width: 80%;
+            }
+
+            .text {
+                width: 100%;
+            }
+        }
+
+        .comments {
+            width: 90%;
+        }
+
+        .contact-data {
+            p {
+                text-align: center;
+                color: $gray;
+            }
+
+            a {
+                font-size: 5vw;
+            }
+        }
+    }
+}

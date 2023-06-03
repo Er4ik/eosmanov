@@ -11,6 +11,21 @@ export class HeaderComponent {
   activeTab: string = '';
   isBurgerActive = false;
 
+  tabs = [
+    {
+      tab: '',
+      text: 'Select Work',
+    },
+    {
+      tab: 'resume',
+      text: 'Resume',
+    },
+    {
+      tab: 'about',
+      text: 'About + Connect',
+    },
+  ]
+
   constructor(private readonly router: Router) {}
 
   toggleMenu() {

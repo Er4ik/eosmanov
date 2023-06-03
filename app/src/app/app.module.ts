@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { ResumeComponent } from './resume/resume.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { ButtonComponent } from './shared/button/button.component';
+import { ElunicComponent } from './elunic/elunic.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ButtonComponent } from './shared/button/button.component';
     WorkComponent,
     ResumeComponent,
     AboutComponent,
+    ElunicComponent,
   ],
   imports: [
     BrowserModule,

@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class WorkComponent {
   constructor(private readonly router: Router) { }
 
-  onAboutPageClick() {
-    this.router.navigateByUrl('/about');
+  onNavigate(url: string) {
+    this.router.navigateByUrl(`/${url}`);
   }
 }
