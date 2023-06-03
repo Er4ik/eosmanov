@@ -80,6 +80,10 @@
         margin: 50px auto;
         flex-direction: column;
         gap: 20px;
+        h3 {
+            font-size: 2.5625vw;
+        }
+
         p {
             color: $gray;
             text-align: center;
@@ -90,7 +94,7 @@
             gap: 20px;
 
             img {
-                width: 50px;
+                width: 45px;
                 cursor: pointer;
             }
         }
@@ -167,6 +171,12 @@
             font-size: 5vw;
         }
 
+        .contact {
+            h3 {
+                font-size: 4vw;
+            }
+        }
+
         .bio {
             max-width: 80vw;
             margin: 50px auto;
@@ -224,12 +234,16 @@
         }
 
         .contact {
+            h3 {
+                font-size: 6vw;
+            }
+
             .messangers {
                 display: flex;
                 gap: 20px;
 
                 img {
-                    width: 45px;
+                    width: 35px;
                     cursor: pointer;
                 }
             }
