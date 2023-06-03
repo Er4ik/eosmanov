@@ -3,7 +3,7 @@
 .about-wrapper {
     @include flex-center;
     flex-direction: column;
-    margin: 180px auto;
+    margin: 100px auto;
 
     h1 {
         font-size: 3vw;
@@ -29,7 +29,7 @@
         margin: 100px auto;
         display: flex;
         max-width: 60vw;
-        gap: 10px;
+        gap: 30px;
 
         &-info {
             @include flex-center;
@@ -42,7 +42,8 @@
             }
 
             p {
-                color: $gray;
+                color: $black;
+                text-align: justify
             }
         }
 
@@ -164,6 +165,18 @@
     }
 }
 
+@media screen and (min-width: 1600px) {
+    .about-wrapper {
+        .bio {
+            &-info {
+                p {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 990px) {
     .about-wrapper {
 
@@ -215,15 +228,19 @@
     }
 }
 
+$margin-media-550: 20px auto;
+
 @media screen and (max-width: 550px) {
     .about-wrapper {
-        margin: 100px auto;
+        margin: 50px auto;
 
         h1 {
             font-size: 7vw;
         }
 
         .head-info {
+            margin: $margin-media-550;
+
             h2 {
                 font-size: 4vw;
             }
@@ -233,7 +250,13 @@
             }
         }
 
+        .bio {
+            margin: $margin-media-550;
+        }
+
         .contact {
+            margin: $margin-media-550;
+
             h3 {
                 font-size: 6vw;
             }

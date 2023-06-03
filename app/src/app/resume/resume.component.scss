@@ -3,7 +3,7 @@
 .resume-wrapper {
     @include flex-center;
     flex-direction: column;
-    margin: 180px auto;
+    margin: 100px auto;
 
     h1 {
         font-size: 3vw;
@@ -71,6 +71,26 @@
         .main-info {
             h3 {
                 font-size: 2.5625vw;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .resume-wrapper {
+        margin: 50px auto;
+
+        h1 {
+            font-size: 6vw;
+        }
+
+        main {
+            margin: 20px auto;
+        }
+
+        .main-info {
+            h3 {
+                font-size: 3vw;
             }
         }
     }
